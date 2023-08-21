@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400;10..48,500&family=Lora:ital,wght@0,500;1,500&family=Playfair+Display:ital@1&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow Condensed', sans-serif;
+/* font-family: 'Bricolage Grotesque', sans-serif; */
+/* font-family: 'Lora', serif; */
+/* font-family: 'Playfair Display', serif; */
+}
