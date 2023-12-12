@@ -61,5 +61,7 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.3.3"
-  }
+  },
+  "homepage": "https://pratikdevelop.github.io/contact-management-app/",
+
 }
