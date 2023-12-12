@@ -6,12 +6,13 @@ import { useState, useEffect } from "react";
 import ContactCard from "./ContactCard";
 import { useQuery } from "react-query";
 import { Alert, AlertIcon, CircularProgress, Spinner } from "@chakra-ui/react";
+import { db } from "../config";
 
 const Contacts = () => {
   // useState
-  const fetchContacts = async () => {
+  const fetchContacts =  async() => {
     try {
-      return await axios.get("http://localhost:3030/contacts");
+      return await db.collection('contacts').orderBy('createdAt', 'desc').get();
     } catch (error) {
       console.error(
         "error founded in calling api for contacts , error:",
@@ -21,13 +22,13 @@ const Contacts = () => {
   };
   // Feth all contact list
 
-  const { data, isLoading } = useQuery("contact", fetchContacts);
+  // const { data, isLoading } = useQuery("contact", fetchContacts);
 
-  console.log(data);
+  console.log(fetchContacts());
 
   return (
     <>
-      {
+      {/* {
         isLoading ? (
           <div className="flex w-full h-[100vh] items-center justify-center">
             <CircularProgress size="200px" isIndeterminate color="blue" />{" "}
@@ -53,7 +54,7 @@ const Contacts = () => {
               </Alert>
             </div>
           )
-      }
+      } */}
     </>
   );
 };
